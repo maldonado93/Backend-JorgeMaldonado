@@ -1,0 +1,18 @@
+service: backend-JorgeMaldonado
+provider:
+  name: aws
+  runtime: nodejs12.x
+  timeout: 12
+custom:
+  serverless-offline:
+    httpPort: 3000
+functions:
+ api:
+   handler: lambda.JorgeMaldonado
+   events:
+     - http:
+          path: express
+          method: get
+          cors: true
+
+
