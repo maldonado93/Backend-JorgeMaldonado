@@ -13,6 +13,7 @@ module.exports = {
     connect : function(){
 
         mongoose.connect(CONFIG.DB, {}).then(()=>console.log("Conectado")).
-        catch((e)=> console.log('error', e))    
+        catch((e)=> console.log('error', e))   
+       
     }
 }

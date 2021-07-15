@@ -2,8 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 
 const App = express();
-const Client= require('./routes/client');
+const routes= require('./routes/bocc_customers');
 App.use(bodyParser.json());
-App.use(bodyParser.urlencoded({extended: false}));
-App.use('/client',Client );
+App.use(bodyParser.urlencoded({extended: true}));
+App.use('/', routes());
 module.exports= App;
